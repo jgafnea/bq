@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-bq = "bq:main"
+bq = "bq.cli:main"
 
 [build-system]
 requires = ["hatchling"]
