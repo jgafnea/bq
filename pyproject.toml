@@ -1,0 +1,26 @@
+[project]
+name = "bq"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "jgafnea", email = "84107636+jgafnea@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "libgen-api>=1.0.1",
+    "pyshorteners>=1.0.1",
+    "rich>=14.0.0",
+]
+
+[project.scripts]
+bq = "bq:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.0",
+]
