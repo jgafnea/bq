@@ -1,0 +1,35 @@
+name: CI tests
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+        # Optionally add a version of uv to install.
+        #   version: "0.7.10"
+
+      - name: install python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: install project dependencies
+        run: uv sync --locked --all-extras --dev
+
+      - name: run tests
+        run: uv run pytest -v
