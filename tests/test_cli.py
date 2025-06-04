@@ -34,7 +34,7 @@ def test_cli_no_results(mock_print, mock_search):
 
     mock_search.assert_called_once_with("Null Book")
     mock_print.assert_called_once_with(
-        "[bold yellow]No results: [/] [bold]'Null Book'[/]"
+        "[bold yellow]No results: [/][bold]'Null Book'[/]"
     )
 
 

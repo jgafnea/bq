@@ -15,7 +15,7 @@ def main():
     try:
         results = search(args.title)
         if not results:
-            console.print(f"[bold yellow]No results: [/] [bold]'{args.title}'[/]")
+            console.print(f"[bold yellow]No results: [/][bold]'{args.title}'[/]")
             sys.exit(1)
         display(results)
 
