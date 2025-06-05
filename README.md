@@ -4,11 +4,9 @@
 
 `bq` is a CLI tool for searching and downloading eBooks.
 
-<p align="center">
-  <img src="./assets/screenshot.png" width="600" alt="CLI demo screenshot">
-</p>
+![screenshot](./assets/screenshot.png)
 
-### Installation
+## Installation
 
 > **Required**:
 > - Python 3.10+
@@ -23,7 +21,7 @@ uv install
 pipx install .
 ```
 
-### Usage
+## Usage
 
 Search book titles and click links to download:
 
