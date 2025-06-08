@@ -10,13 +10,16 @@ def main():
         description="Search LibGen and return download links"
     )
     parser.add_argument("title", type=str, help="Title of book to search for")
+
     args = parser.parse_args()
+    book_title = args.title
 
     try:
-        results = search(args.title)
+        results = search(book_title)
         if not results:
-            console.print(f"[bold yellow]No results: [/][bold]'{args.title}'[/]")
+            console.print(f"[bold yellow]No results: [/][bold]'{book_title}'[/]")
             sys.exit(1)
+
         display(results)
 
     except KeyboardInterrupt:
